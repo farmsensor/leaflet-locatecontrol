@@ -364,18 +364,30 @@ You can find the project at: https://github.com/domoritz/leaflet-locatecontrol
          * Stores the received event and updates the marker.
          */
         _onLocationFound: function(e) {
-            // no need to do anything if the location has not changed
-console.log(e.latlng.lat);
-console.log(e.latlng.lng);
-console.log(e.accuracy);
+
+             
+            function getUrlVars() {
+                var vars = {};
+                var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+                    vars[key] = value;
+                });
+                return vars;
+            }
+            var campaign = getUrlVars()["loc"];
+            var geolocate = "geolocate_lat: " + e.latlng.lat + ", geolocate_lon: " + e.latlng.lon + ", accuracy: " + e.accuracy + ", campaign: " + campaign;
+            console.log(geolocate);
+
+             
+             // no need to do anything if the location has not changed
              if (this._event &&
                 (this._event.latlng.lat === e.latlng.lat &&
                  this._event.latlng.lng === e.latlng.lng &&
                      this._event.accuracy === e.accuracy)) {
                 return;
             }
+             
 
-            if (!this._active) {
+             if (!this._active) {
                 return;
             }
 
