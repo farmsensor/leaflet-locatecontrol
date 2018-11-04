@@ -243,6 +243,7 @@ You can find the project at: https://github.com/domoritz/leaflet-locatecontrol
          */
         createMarker: function(latlng, mStyle) {
             return this.options.markerClass(latlng, mStyle);
+            console.log(latlng);
         },
 
         /**
@@ -254,6 +255,7 @@ You can find the project at: https://github.com/domoritz/leaflet-locatecontrol
             this._marker.setLatLng(latlng);
             for (var o in mStyle) {
                 this._marker.options[o] = mStyle[o];
+                console.log(latlng);
             }
         },
 
