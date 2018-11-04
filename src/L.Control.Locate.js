@@ -365,7 +365,9 @@ You can find the project at: https://github.com/domoritz/leaflet-locatecontrol
          */
         _onLocationFound: function(e) {
             // no need to do anything if the location has not changed
-             console.log(latlng);
+console.log(e.latlng.lat);
+console.log(e.latlng.lng);
+console.log(e.accuracy);
              if (this._event &&
                 (this._event.latlng.lat === e.latlng.lat &&
                  this._event.latlng.lng === e.latlng.lng &&
