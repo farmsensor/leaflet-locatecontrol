@@ -243,7 +243,6 @@ You can find the project at: https://github.com/domoritz/leaflet-locatecontrol
          */
         createMarker: function(latlng, mStyle) {
             return this.options.markerClass(latlng, mStyle);
-            console.log(latlng);
         },
 
         /**
@@ -255,7 +254,6 @@ You can find the project at: https://github.com/domoritz/leaflet-locatecontrol
             this._marker.setLatLng(latlng);
             for (var o in mStyle) {
                 this._marker.options[o] = mStyle[o];
-                console.log(latlng);
             }
         },
 
@@ -367,7 +365,8 @@ You can find the project at: https://github.com/domoritz/leaflet-locatecontrol
          */
         _onLocationFound: function(e) {
             // no need to do anything if the location has not changed
-            if (this._event &&
+             console.log(latlng);
+             if (this._event &&
                 (this._event.latlng.lat === e.latlng.lat &&
                  this._event.latlng.lng === e.latlng.lng &&
                      this._event.accuracy === e.accuracy)) {
