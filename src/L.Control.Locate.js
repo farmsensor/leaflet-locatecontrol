@@ -375,7 +375,7 @@ You can find the project at: https://github.com/domoritz/leaflet-locatecontrol
             }
             var campaign = getUrlVars()["campaign"];
             var center = getUrlVars()["center"];
-            var geolocate = "geolocate_lat: " + e.latlng.lat + ", geolocate_lon: " + e.latlng.lng + ", accuracy: " + e.accuracy + ", campaign: " + campaign", center: " + center;
+            var geolocate = "geolocate_lat: " + e.latlng.lat + ", geolocate_lon: " + e.latlng.lng + ", accuracy: " + e.accuracy + ", campaign: " + campaign + ", center: " + center;
             console.log(geolocate);
 
              
