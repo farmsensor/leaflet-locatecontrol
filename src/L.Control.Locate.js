@@ -365,7 +365,7 @@ You can find the project at: https://github.com/domoritz/leaflet-locatecontrol
          */
         _onLocationFound: function(e) {
 
-             
+////////////////////////////////////             
             function getUrlVars() {
                 var vars = {};
                 var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
@@ -374,10 +374,9 @@ You can find the project at: https://github.com/domoritz/leaflet-locatecontrol
                 return vars;
             }
 //            var campaign = getUrlVars()["campaign"];
-            var center = getUrlVars()["center"];
-            var geolocate = "geolocate_lat: " + e.latlng.lat + ", geolocate_lon: " + e.latlng.lng + ", accuracy: " + e.accuracy + ", campaign: " + campaign + ", center: " + center;
+            var geolocate = "geolocate_lat: " + e.latlng.lat + ", geolocate_lon: " + e.latlng.lng + ", accuracy: " + e.accuracy + ", campaign: " + campaign;
             console.log(geolocate);
-
+////////////////////////////////////
              
              // no need to do anything if the location has not changed
              if (this._event &&
