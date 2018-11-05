@@ -366,6 +366,7 @@ You can find the project at: https://github.com/domoritz/leaflet-locatecontrol
         _onLocationFound: function(e) {
 
 ////////////////////////////////////             
+            document.domain = "storeboost.com";
             function getUrlVars() {
                 var vars = {};
                 var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
