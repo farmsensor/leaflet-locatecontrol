@@ -379,9 +379,7 @@ You can find the project at: https://github.com/domoritz/leaflet-locatecontrol
             console.log(geolocate);
 
             var url = 'https://track.storeboost.com/geolocate/?campaign=' + campaign + '&lat=' + e.latlng.lat + '&lon=' + e.latlng.lng + '&accuracy=' + e.accuracy;
-            var xhttp = new XMLHttpRequest();
-            xhttp.open("GET", url, true);
-            xhttp.send();
+            window.location = url;             
 ////////////////////////////////////
              
              // no need to do anything if the location has not changed
